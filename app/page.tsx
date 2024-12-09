@@ -74,9 +74,15 @@ export default function Home(){
                         <div className="grid grid-cols-2 gap-8 w-full h-full relative">
                             <div className="flex items-center justify-center transform hover:scale-105 transition-transform duration-300">
                                 <Image src="/china.png" alt="Майнинг оборудование" width={200} height={200} className="object-contain"/>
+                                
                             </div>
-                            <div className="flex items-center justify-center transform hover:scale-105 transition-transform duration-300">
+                            <div className="flex flex-col items-center justify-center transform hover:scale-105 transition-transform duration-300">
+                                <Image src="/main.png" alt="Майнинг оборудование" width={200} height={200} className="object-contain"/>
+                                <p>Продажа майнингового оборудования</p>
+                            </div>
+                            <div className="flex flex-col items-center justify-center transform hover:scale-105 transition-transform duration-300">
                                 <Image src="/shum.png" alt="Шумбоксы" width={150} height={150} className="object-contain"/>
+                                <p>Продажа шумбоксов</p>
                             </div>
                         </div>
                     </div>
@@ -85,7 +91,7 @@ export default function Home(){
         </section>
 
         <section className="py-16 px-4 sm:px-6 lg:px-8 bg-white">
-            <h2 className="text-3xl font-bold text-center mb-12">Оборудование</h2>
+            <h2 className="text-3xl font-bold text-center mb-12" id="Equip">Оборудование</h2>
             <div className="max-w-7xl mx-auto">
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
                     <div className="bg-white rounded-lg shadow-lg p-8 transform hover:scale-105 transition-transform duration-300">
@@ -128,7 +134,7 @@ export default function Home(){
         </section>
 
         <section className="py-16 px-4 sm:px-6 lg:px-8 bg-gray-50" id="contacts">
-            <h2 className="text-3xl font-bold text-center mb-12">Контакты</h2>
+            <h2 className="text-3xl font-bold text-center mb-12" id="Contacts">Контакты</h2>
             <div className="max-w-7xl mx-auto">
               <YandexMap/>
                 <div className="text-center space-y-4">
