@@ -15,8 +15,9 @@ import {
 } from "@/components/ui/dialog"
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
-import { FormEvent, useState, useTransition } from "react";
+import { FormEvent, useEffect, useState, useTransition } from "react";
 import { sendMails } from "@/action";
+import { NextRequest } from "next/server";
 const YandexMap = dynamic(() => import('@/components/Map'), {
     ssr: false,
     loading: () => <div className="mb-12 h-[400px] bg-[#43d6fa] animate-pulse rounded-lg"></div>
@@ -27,6 +28,7 @@ export default function Home(){
     const [name, setName] = useState('');
     const [isPending, startTransition] = useTransition();
 
+    
     function submitForm(e: React.FormEvent<HTMLFormElement>) {
         e.preventDefault();
         if (!phone) {
@@ -62,6 +64,7 @@ export default function Home(){
                         <p className="text-xl sm:text-2xl font-bold text-white mt-4">
                             Искусственный интеллект
                         </p>
+                        
                     </div>
                     <div className="mt-10 flex flex-col items-center">
                         <div className="transform hover:scale-105 transition-transform duration-300">
